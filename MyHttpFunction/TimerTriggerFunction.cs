@@ -17,13 +17,7 @@ namespace MyHttpFunction
             _logger = logger;
         }
         [FunctionName("TimerTriggerFun")]
-        public void Run([TimerTrigger("0 */2 * * * *",
-
-#if DEBUG
-    RunOnStartup= true
-#endif
-
-            )] TimerInfo timerInfo, ILogger log)
+        public void Run([TimerTrigger("0 */2 * * * *")] TimerInfo timerInfo, ILogger log)
         {
             try
             {
